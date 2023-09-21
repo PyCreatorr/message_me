@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MessageMe</title>
+    <title>Messege me</title>
+    <%= favicon_link_tag %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <!-- Install bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+     <%= javascript_importmap_tags%>
+    
+
   </head>
 
-  <body>
-    <%= yield %>
+<body class="d-flex flex-column h-100"> 
+
+    <%= render 'layouts/navigation' %>
+
+        <main>
+          <div class="container mt-3">
+            <%= yield %>
+        </main>
+          </div>
+    <%= render 'layouts/footer'%>
+
   </body>
 </html>

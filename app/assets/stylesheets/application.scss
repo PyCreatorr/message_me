@@ -1,0 +1,23 @@
+//@import 'semantic-ui';
+ @import "bootstrap";
+
+ html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.me-auto-50 {
+    margin-right: 50% !important;
+}
+
+.me-auto-20 {
+    margin-right: 20px !important;
+}
+
+.dropdown-account {
+    min-width: 2rem;
+    margin-top: 0.5rem !important;
+}
+
+$navbar-padding-y: $spacer * .5;
+$navbar-padding-x: null;

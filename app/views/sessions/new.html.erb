@@ -1,1 +1,47 @@
-<h1>Sessions</h1>
+<%= render 'layouts/header', obj: 'Log in / Sign up to continue' %>
+
+<div class="row mb-3 text-left pb-3" style="min-height: 100%">
+                    <div class="row" style="height:100%; border: 1ps solid red"> 
+                    <div class="col-md-6 themed-grid-col position-relative" style="display: inline-block;">
+                        <div class="border rounded-3">
+                        <div>
+                            <div class="alert ">
+                                <%= form_with scope: :session, url: login_path, local: true do |f| %>
+                                <div class="mb-3">
+                                    <!-- <%= f.label :email, class: "form-label" %> -->
+                                    <%= f.email_field :email, class: "form-control", placeholder: "Your email" %>
+                                </div>
+                                <div class="mb-3">
+                                    <!-- <%= f.label :password, class: "form-label" %> -->
+                                    <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+                                </div>
+                                <div class="mb-0 text-center d-grid gap-2">
+                                    <%= f.submit "Log in", class: "btn btn-primary"  %>
+                                </div>
+                                <% end %>
+                            </div> 
+                        </div>
+
+                        </div>
+                    
+                    </div>
+                    <div class="col-md-6 themed-grid-col" style="display: inline-block;">
+                        <div class="alert border rounded-3" style="height:100%;   margin: 0;">
+                            <div style="vertical-align: middle;">
+                                <div class="mb-0 text-center d-grid gap-2 ">
+                                <p>If you don't have account, just:</p>
+                                    <%= link_to login_path, class: "btn btn-primary" do %>
+                                        <i class="bi bi-box-arrow-in-left"></i></i> Sign up
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+
+
+
+
+

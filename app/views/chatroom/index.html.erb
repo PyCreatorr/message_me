@@ -1,13 +1,77 @@
-<h1>Chatroom</h1>
-<i class="bi bi-cup-hot"></i>
-<i class="fas fa-arrow-right"></i>
-<button type="button" class="btn btn-primary">Primary</button>
+<%= render 'layouts/header', obj: 'Say something' %>
+<div class="row mb-3 text-left pb-3">
+    <div class="row"> 
+      <div class="col-md-9 themed-grid-col">
+        <div class="border rounded-3">
+          <div>
+            <div class="alert chatbox">
+              <div class="event">
+                <div class="content">
+                  <div class="summary">
+                      <p><a href="">Helen Troy</a> added <a href="">Christina Rocha</a> as a friend</p>
+                    </div>
+                </div>
+                <hr>      
+              </div>
+              <div class="event">
+                <div class="content">
+                  <div class="summary">
+                      <p><em>Helen Troy</em>: test message</p>
+                    </div>
+                </div>
+                <hr>      
+              </div>
 
-<%= button_to root_path, class: "btn btn-primary" do %>
-<i class="bi bi-hand-thumbs-up"></i>
-test
-<% end %>
-<i class="bi bi-send-fill"></i>
-<i class="bi bi-chat-square-heart-fill"></i>
-<i class="bi bi-bell-fill"></i>
+            </div> 
+              <div class="input-group p-3">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+              </div>
+          </div>
+
+        </div>
+      
+      </div>
+      <div class="col-md-3 themed-grid-col">
+        <div class="border rounded-3 ">
+          <ul class="nav navbar-dark nav-pills flex-column mb-auto navbar-dark bg-dark rounded-3">
+            <li class="nav-item">
+              <a href="#" class="nav-link active" aria-current="page">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                Orders
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                Products
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+                Customers
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+
 

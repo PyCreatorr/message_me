@@ -5,6 +5,8 @@ import "controllers"
 import "popper"
 import "bootstrap"
 
+console.log("Hello world!!!");
+
 
 // import "jquery" 
 //import "semantic-ui"

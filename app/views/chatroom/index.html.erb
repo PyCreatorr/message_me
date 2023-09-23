@@ -5,22 +5,9 @@
         <div class="border rounded-3">
           <div>
             <div class="alert chatbox">
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                      <p><a href="">Helen Troy</a> added <a href="">Christina Rocha</a> as a friend</p>
-                    </div>
-                </div>
-                <hr>      
-              </div>
-              <div class="event">
-                <div class="content">
-                  <div class="summary">
-                      <p><em>Helen Troy</em>: test message</p>
-                    </div>
-                </div>
-                <hr>      
-              </div>
+            <% if @messages.any? %>
+            <%= render @messages %>
+            <% end %>
 
             </div> 
               <div class="input-group p-3">

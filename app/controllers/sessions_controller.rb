@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+    before_action :not_logged_in?, only: [:new, :create]
+
     def new
         
     end
@@ -21,6 +23,15 @@ class SessionsController < ApplicationController
         session[:user_id] = nil
         flash[:success] = 'Logged out!'
         redirect_to login_path
+    end
+
+    private
+
+    def not_logged_in?
+        if logged_in?
+            flash[:danger] = "You are already logged in"
+            redirect_to root_path
+        end
     end
 
 

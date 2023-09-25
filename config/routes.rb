@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   root "chatroom#index"
+  post 'chatroom', to: "chatroom#create"
+  post 'message', to: "messages#create"
 
   # Authentification session
   get 'login', to: 'sessions#new'

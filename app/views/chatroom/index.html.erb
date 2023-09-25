@@ -5,15 +5,20 @@
         <div class="border rounded-3">
           <div>
             <div class="alert chatbox">
-            <% if @messages.any? %>
-            <%= render @messages %>
+            <% if @messages %>
+              <%= render @messages %>
             <% end %>
 
             </div> 
+              <%= form_with(model: @message, html: {class: "form-control"}, url: message_path) do |f| %>                
               <div class="input-group p-3">
-                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-              </div>
+                  <%= f.text_field :body, class: "form-control", placeholder: "Type something..." %>                  
+                  <%= f.button do %>
+                  <i class="bi bi-send-fill"></i>
+                  send
+                  <% end %>
+                <% end %>
+              </div>               
           </div>
 
         </div>

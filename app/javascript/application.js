@@ -2,10 +2,12 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
+
+
 import "popper"
 import "bootstrap"
 
-console.log("Hello world!!!");
+console.log("Hello world from application_js!!!");
 
 
 // import "jquery" 
@@ -32,3 +34,26 @@ console.log("Hello world!!!");
 // $(document).on('turbolinks:load', function(){
 //     $('.ui.dropdown').dropdown(); 
 // })
+
+//import consumer from "channels/consumer"
+
+//import chatroom_channel from "channels/chatroom_channel"
+
+//import './chatroom_channel'
+
+// import channels from "./channels"
+
+// import 'channels/chatroom_channel'
+// import 'channels/consumer'
+
+
+
+
+//import * as jq from './channels';
+
+// Define a variable to check in inlined HTML script
+//window.importmapScriptsLoaded = true;
+
+import "./channels"
+// import "channels/consumer"
+// import "channels/chatroom_channel"

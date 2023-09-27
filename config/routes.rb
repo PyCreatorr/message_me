@@ -15,6 +15,11 @@ Rails.application.routes.draw do
   # create all other routes for user
   resources :users, except: [:new]
 
+  mount ActionCable.server, at: '/cable'
+
+  
+
   # Defines the root path route ("/")
   # root "articles#index"
+
 end

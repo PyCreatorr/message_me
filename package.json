@@ -1,1 +1,6 @@
-{}
+{
+  "dependencies": {
+    "@rails/actioncable": "^7.0.8",
+    "@types/rails__actioncable": "^6.1.7"
+  }
+}

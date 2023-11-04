@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     #helper_methods will be achieved from the views, not only from the controllers
-    helper_method :current_user, :logged_in?
+    helper_method :current_user, :logged_in?, :message_render
     def current_user
         # Memoization of the current_user. If current_user is defined, give back, don't query db.
         # If not -> query db (find user)
@@ -20,5 +20,9 @@ class ApplicationController < ActionController::Base
           flash[:danger] = "You must be logged in to perform this action"
           redirect_to login_path
         end
+    end
+
+    def message_render(message)
+        render(partial: 'message', locals: {message: message})        
     end
 end

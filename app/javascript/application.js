@@ -2,58 +2,62 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-
-
 import "popper"
 import "bootstrap"
 
 console.log("Hello world from application_js!!!");
 
-
-// import "jquery" 
-//import "semantic-ui"
-
-//import "jquery" 
-//import "semantic-ui"
-
-// $(document).on('turbo:load', function() {
-//     console.log('loaded turbo links')
-//     $('.ui.dropdown').dropdown();
-//      $('.ui.accordion').accordion();
-//     //$('.ui.accordion').accordion('refresh');
-// });
-
-// $(document).on('turbo:load', function() {
-//     console.log('loaded turbo links')
-//     $('.ui.accordion').accordion()
-// });
-
-// $(document).ready(function(){
-//     $('.ui.accordion').accordion()});
-
-// $(document).on('turbolinks:load', function(){
-//     $('.ui.dropdown').dropdown(); 
-// })
-
-//import consumer from "channels/consumer"
-
-//import chatroom_channel from "channels/chatroom_channel"
-
-//import './chatroom_channel'
-
-// import channels from "./channels"
-
-// import 'channels/chatroom_channel'
-// import 'channels/consumer'
-
-
-
-
-//import * as jq from './channels';
-
-// Define a variable to check in inlined HTML script
-//window.importmapScriptsLoaded = true;
-
 import "./channels"
-// import "channels/consumer"
-// import "channels/chatroom_channel"
+
+
+
+
+export function scroll_bottom(){
+    if ($('#messages').length > 0){
+        $('#messages').scrollTop($('#messages')[0].scrollHeight);
+    }
+}
+
+export function submit_message(){
+    $('#body').on('keydown', function(e){
+
+        var keycode = (e.keyCode ? e.keyCode : e.which);
+        if(keycode == 13 ){
+            console.log("ll")
+           // $('#new_message form').submit();
+            //console.log('clicked');
+            //$('button[name="button"]').click();
+            //e.target.value = "";
+            //return false;  
+
+        }
+    });
+
+    const input = document.querySelector("input");
+    const log = document.getElementById("values");
+    
+    input.addEventListener("input", updateValue);
+    
+    function updateValue(e) {
+      //log.textContent = e.target.value;
+      console.log("event_listener");
+      //console.log(e.target.value);
+    }
+
+    $('button[name="button"]').on('click', function(e){         
+        console.log('clicked2');
+        //$('#form_submit form').submit();
+        //$('button[name="button"]').click();
+        //e.target.value = "";
+        //e.inputTarget.value = "";
+        //e.target.click();
+            //return false;  
+
+    });
+}
+
+$(document).ready(function() {
+    
+    scroll_bottom();
+  
+});

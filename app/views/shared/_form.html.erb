@@ -1,0 +1,17 @@
+<%= form_with(model: @message, id: "message_form", html: {class: "form-control"}, url: message_path, method: "post", 
+data: { controller: "reset-form", action: "turbo:submit-end->reset-form#clearInput" },
+remote: true) do |f| %>                
+  <div class="input-group p-3">
+    <%= f.text_field :body, class: "form-control", 
+    data: { reset_form_target: "input"},
+    placeholder: "Type something..." %>                  
+    <%= f.button do %>  
+    <i class="bi bi-send-fill" ></i>
+      <% end %>
+  </div>
+<% end %>
+            
+
+
+          
+

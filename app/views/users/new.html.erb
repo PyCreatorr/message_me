@@ -6,7 +6,11 @@
                         <div class="border rounded-3">
                         <div>
                             <div class="alert ">
-                                <%= form_with scope: :session, url: login_path, local: true do |f| %>
+                                <%= form_with model: @user, url: signup_path, method: :post, local: true do |f| %>
+                                <div class="mb-3">
+                                    <!-- <%= f.label :email, class: "form-label" %> -->
+                                    <%= f.text_field :username, class: "form-control", placeholder: "Your username" %>
+                                </div>
                                 <div class="mb-3">
                                     <!-- <%= f.label :email, class: "form-label" %> -->
                                     <%= f.email_field :email, class: "form-control", placeholder: "Your email" %>
@@ -22,21 +26,9 @@
                             </div> 
                         </div>
 
-                        </div>
-                    
+                        </div>                    
                     </div>
-                    <div class="col-md-6 themed-grid-col" style="display: inline-block;">
-                        <div class="alert border rounded-3" style="height:100%;   margin: 0;">
-                            <div style="vertical-align: middle;">
-                                <div class="mb-0 text-center d-grid gap-2 ">
-                                <p>If you don't have account, just:</p>
-                                    <%= link_to signup_path, class: "btn btn-primary" do %>
-                                        <i class="bi bi-box-arrow-in-left"></i></i> Sign up
-                                    <% end %>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     </div>
 
 

@@ -1,0 +1,16 @@
+ <%# ActionCable.server.broadcast("chatroom_channel", { full_message: message_render(@message) }) %>
+
+<%# render(partial: 'message', locals: {message: message}) %>
+ <% 
+    broadcast_append_to "chatroom_channel",
+    partial: "message",
+    locals: { message: self }
+ %>
+
+ 
+
+
+
+
+
+
